@@ -1,11 +1,21 @@
 alice:
   build: alice/.
+  command: |
+    bash -c "bash -s <<EOF
+    confd -backend=env -onetime;
+    /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+    EOF"
   volumes:
     # replace './alice' by the correct path for Codebase
     - ./alice:/app
 
 bob:
   build: bob/.
+  command: |
+    bash -c "bash -s <<EOF
+    confd -backend=env -onetime;
+    /usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
+    EOF"
   volumes:
     # replace './bob' by the correct path for Codebase
     - ./bob:/app
