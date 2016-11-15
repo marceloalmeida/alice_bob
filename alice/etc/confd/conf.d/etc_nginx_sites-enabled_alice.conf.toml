@@ -1,0 +1,11 @@
+[template]
+src = "etc/nginx/sites-enabled/alice.conf"
+dest = "/etc/nginx/sites-enabled/alice.conf"
+keys = [
+    "/alice/country/iso",
+    "/alice/environment",
+    "/alice/domain",
+    "/alice/timezone",
+    "/alice/session/savehandler",
+    "/alice/session/savepath"
+]

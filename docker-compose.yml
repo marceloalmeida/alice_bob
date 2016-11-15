@@ -1,0 +1,11 @@
+alice:
+  build: alice/.
+  volumes:
+    # replace './alice' by the correct path for Codebase
+    - ./alice:/app
+
+bob:
+  build: bob/.
+  volumes:
+    # replace './bob' by the correct path for Codebase
+    - ./bob:/app

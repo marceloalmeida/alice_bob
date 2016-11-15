@@ -1,0 +1,3 @@
+[template]
+src = "etc/php/7.0/fpm/pool.d/bob.conf"
+dest = "/etc/php/7.0/fpm/pool.d/bob.conf"

@@ -1,0 +1,5 @@
+[template]
+src = "etc/php/7.0/mods-available/aig_configs.ini"
+dest = "/etc/php/7.0/mods-available/aig_configs.ini"
+check_cmd = "! /usr/sbin/phpquery -s fpm -m aig_configs"
+reload_cmd = "/usr/sbin/phpenmod -v ALL -s ALL aig_configs"

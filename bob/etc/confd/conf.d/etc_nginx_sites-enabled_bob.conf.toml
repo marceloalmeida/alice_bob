@@ -1,0 +1,8 @@
+[template]
+src = "etc/nginx/sites-enabled/bob.conf"
+dest = "/etc/nginx/sites-enabled/bob.conf"
+keys = [
+    "/environment",
+    "/domain",
+    "/timezone",
+]
