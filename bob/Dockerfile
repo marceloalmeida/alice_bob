@@ -59,7 +59,7 @@ ADD etc /etc
 ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-0.11.0-linux-amd64 /bin/confd
 RUN chmod a+x /bin/confd
 
-ADD https://github.com/marcelosousaalmeida/nginx-php-fpm-prometheus/releases/download/0.0.2-alpha/nginx-php-fpm-prometheus_0.0.2-alpha_linux_amd64 /bin/nginx-php-fpm-prometheus
+ADD https://github.com/marceloalmeida/nginx-php-fpm-prometheus/releases/download/0.0.2-alpha/nginx-php-fpm-prometheus_0.0.2-alpha_linux_amd64 /bin/nginx-php-fpm-prometheus
 RUN chmod a+x /bin/nginx-php-fpm-prometheus
 
 ENV \

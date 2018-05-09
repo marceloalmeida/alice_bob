@@ -1,5 +1,6 @@
 alice:
-  build: alice/.
+  #build: alice/.
+  image: marceloalmeida/alice_bob:alice
   command: |
     bash -c "bash -s <<EOF
     confd -backend=env -onetime;
@@ -10,7 +11,8 @@ alice:
     - ./alice:/app
 
 bob:
-  build: bob/.
+  #build: bob/.
+  image: marceloalmeida/alice_bob:bob
   command: |
     bash -c "bash -s <<EOF
     confd -backend=env -onetime;

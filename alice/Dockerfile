@@ -44,10 +44,10 @@ RUN apt-get update && \
     apt-get purge -y curl && apt-get clean && apt-get autoremove -yq --purge && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ADD dependencies/ /deps/
-ADD https://github.com/marcelosousaalmeida/libmustache4-builddeb/releases/download/v0.4.2/libmustache4_0.4.2-1_amd64.deb /deps/
-ADD https://github.com/marcelosousaalmeida/php-mustache-builddeb/releases/download/v0.7.2/php7.0-mustache_0.7.2-1_amd64.deb /deps/
+ADD https://github.com/marceloalmeida/libmustache4-builddeb/releases/download/v0.4.2/libmustache4_0.4.2-1_amd64.deb /deps/
+ADD https://github.com/marceloalmeida/php-mustache-builddeb/releases/download/v0.7.2/php7.0-mustache_0.7.2-1_amd64.deb /deps/
 ADD http://packages.couchbase.com/ubuntu/pool/jessie/main/libc/libcouchbase/libcouchbase2-core_2.6.3-1_amd64.deb /deps/
-ADD https://github.com/marcelosousaalmeida/php-couchbase-builddeb/releases/download/v2.2.3/php7.0-couchbase_2.2.3-aig-1_amd64.deb /deps/
+ADD https://github.com/marceloalmeida/php-couchbase-builddeb/releases/download/v2.2.3/php7.0-couchbase_2.2.3-aig-1_amd64.deb /deps/
 RUN dpkg -i /deps/*.deb && rm -rf /deps
 
 ADD etc /etc
@@ -55,7 +55,7 @@ ADD etc /etc
 ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-0.11.0-linux-amd64 /bin/confd
 RUN chmod a+x /bin/confd
 
-ADD https://github.com/marcelosousaalmeida/nginx-php-fpm-prometheus/releases/download/0.0.2-alpha/nginx-php-fpm-prometheus_0.0.2-alpha_linux_amd64 /bin/nginx-php-fpm-prometheus
+ADD https://github.com/marceloalmeida/nginx-php-fpm-prometheus/releases/download/0.0.2-alpha/nginx-php-fpm-prometheus_0.0.2-alpha_linux_amd64 /bin/nginx-php-fpm-prometheus
 RUN chmod a+x /bin/nginx-php-fpm-prometheus
 
 ENV \
